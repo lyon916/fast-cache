@@ -1,11 +1,8 @@
 from dataclasses import dataclass
 from typing import Any, Optional, Tuple, Type
-
 import pytest
 from pydantic import BaseModel, ValidationError
-
 from fastapi_cache.coder import JsonCoder, PickleCoder
-
 
 @dataclass
 class DCItem:

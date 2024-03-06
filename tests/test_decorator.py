@@ -1,14 +1,9 @@
-import time
+import time, pendulum, pytest
 from typing import Any, Generator
-
-import pendulum
-import pytest
 from starlette.testclient import TestClient
-
 from examples.in_memory.main import app
 from fastapi_cache import FastAPICache
 from fastapi_cache.backends.inmemory import InMemoryBackend
-
 
 @pytest.fixture(autouse=True)
 def _init_cache() -> Generator[Any, Any, None]:  # pyright: ignore[reportUnusedFunction]
